@@ -1,0 +1,34 @@
+.wrapper-box{
+    padding-top: 50px;
+}
+
+.card-dbs{
+    background: #fff;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+
+.card-dbs .content-box{
+    padding: 50px;
+}
+
+.top-bg{
+    background: #000;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+ul li{
+    color: var(--primary-color);
+}
+
+.bdr-box{
+    border: 1px solid #E2E2E2;
+    border-radius: 4px;
+    padding: 20px;
+    background-color: #FBFBFB;
+}

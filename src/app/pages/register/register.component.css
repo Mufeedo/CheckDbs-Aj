@@ -1,0 +1,177 @@
+
+.pink-card {
+    background: url(/images/pink-bg.png);
+    padding: 40px 20px;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    border-radius:15px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.pink-card p{
+   color: #fff;
+}
+
+.white-card{
+    background: #fff;
+    padding: 30px 20px;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    border-radius:15px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding-bottom: 0;
+}
+
+.white-card ol {
+    padding: 20px;
+    margin: 0;
+}
+.white-card ol  li{
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+/* /// */
+/* Remove default Bootstrap tab styling */
+.pagination-wrap .nav-tabs {
+  border-bottom: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 20px;
+}
+
+.pagination-wrap .nav-item {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+.pagination-wrap .nav-link {
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+  align-items: center;
+  color: var(--text-color);
+  line-height: normal;
+  background: transparent;
+  border: none;
+  padding: 0;
+  position: relative;
+}
+
+.pagination-wrap .nav-link span {
+  width: 25px;
+  height: 25px;
+  background: #3a3a3a;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Active tab styling */
+.pagination-wrap .nav-link.active {
+  color: #2563EB;
+}
+
+.pagination-wrap .nav-link.active span {
+  background: #2563EB;
+}
+
+/* Completed tab styling */
+.pagination-wrap .nav-link.complete {
+  color: #009247;
+}
+
+.pagination-wrap .nav-link.complete span {
+  background: #009247;
+}
+
+/* Focus state */
+.pagination-wrap .nav-link:focus {
+  outline: none;
+}
+
+/* Hover state */
+.pagination-wrap .nav-link:not(.active):not(.complete):hover {
+  color: #3a3a3a;
+}
+
+.pagination-wrap .nav-link:not(.active):not(.complete):hover span {
+  background: #3a3a3a;
+}
+
+.pagination-wrap {
+  padding: 20px 0;
+}
+
+
+
+/*  */
+/* 
+
+.pagination-wrap .nav-tabs {
+  border-bottom: none;
+  display: flex;
+  gap: 10px;
+}
+
+.pagination-wrap .nav-item {
+  margin-bottom: 0;
+}
+
+.pagination-wrap .nav-link {
+  position: relative;
+  padding: 10px 20px 10px 40px;
+  margin-right: 0;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 4px;
+  color: inherit;
+  font-weight: normal;
+  text-align: left;
+}
+
+.pagination-wrap .nav-link span {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+}
+
+.pagination-wrap .nav-link.active {
+  background-color: #6C177C;
+  color: white;
+}
+
+.pagination-wrap .nav-link.active span {
+  background-color: white;
+  color: #6C177C;
+}
+
+.pagination-wrap .nav-link.complete {
+  background-color: #d8f5e8;
+}
+
+.pagination-wrap .nav-link.complete span {
+  background-color: #28a745;
+  color: white;
+}
+
+.pagination-wrap .nav-link:not(.active):hover {
+  background-color: #e9e9e9;
+} */

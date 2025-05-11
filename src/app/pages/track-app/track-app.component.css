@@ -1,0 +1,193 @@
+button.primary-btn.btn-lg {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.card-wrap {
+    background: #F9F9F9;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.card-wrap .form-control {
+    background: #F9F9F9;
+}
+
+.card_track {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.green-txt {
+    color: #009247;
+}
+
+.left-right-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.left-right-box h2 {
+    margin: 0 !important;
+}
+
+.left-right-box h2 p {
+    margin: 0 !important;
+}
+
+
+
+.bdr-top {
+    border-top: 1px solid #ebebeb;
+}
+
+.right-box {
+    position: relative;
+    padding-top: 30px;
+}
+
+.right-box .help {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+
+}
+
+.status-box {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.status-box span {
+    width: 20px;
+    height: 20px;
+    background: #D9D9D9;
+    border-radius: 20px;
+    display: block;
+    position: relative;
+}
+
+.status-box:first-child span::before{
+    display: none;
+}
+
+.status-box:last-child span::after{
+    display: none;
+}
+
+.status-box span::after{
+    width: 100%;
+    display: block;
+    height: 1px;
+    background: #D9D9D9;
+    display: block;
+    content: "";
+}
+
+.status-box span::after {
+    width: 200px;
+    display: block;
+    height: 1px;
+    background: #D9D9D9;
+    display: block;
+    content: "";
+    left: 20px;
+    position: absolute;
+    top: 9px;
+}
+.status-box span::before {
+    width: 200px;
+    display: block;
+    height: 1px;
+    background: #D9D9D9;
+    display: block;
+    content: "";
+    right: 20px;
+    position: absolute;
+    top: 9px;
+}
+
+.status-box label{
+    color: #D9D9D9;
+    font-size: 13px;
+}
+
+.active.status-box label{
+    color: #009247;
+}
+.active.status-box span{
+    background-color: #009247;
+    z-index: 2;
+    position: relative;
+    background-image: url(/images/check.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.active:last-child span::after{
+    background: #D9D9D9;
+    z-index: 1;
+    position: absolute
+}
+.active.status-box span::after{
+    background-color: #009247;
+    z-index: 1;
+    position: absolute
+}
+
+.active.status-box span::before{
+    background-color: #009247;
+    z-index: 1;
+    position: absolute
+}
+.last-active span::after{
+    background: #D9D9D9 !important;
+}
+
+.card_track{
+    margin-bottom: 30px;
+}
+@media (max-width: 767.98px) {
+    .timeline {
+        display: flex
+    ;
+        flex-direction: column;
+        margin-bottom: 20px;
+        gap: 10px;
+    }
+   
+    .status-box span::before {
+        display: none;
+    }
+    .status-box span::after {
+        display: none;
+    }
+    .status-box {
+        display: flex
+    ;
+        text-align: center;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        overflow: hidden;
+    }
+   
+}
