@@ -18,23 +18,19 @@
           <div class="pagination-wrap">
             <ul class="nav nav-tabs" id="registrationTabs" role="tablist">
               <li class="nav-item" role="presentation">
-                <button class="nav-link complete" id="company-tab" data-bs-toggle="tab" 
-                        data-bs-target="#company" type="button" role="tab" 
-                        aria-controls="company" aria-selected="false">
+                <button class="nav-link complete" [class.active]="selectedIndex === 0" (click)="setTab(0)">
                   <span>1</span>Company Details
                 </button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="user-tab" data-bs-toggle="tab" 
+                <button class="nav-link" [class.active]="selectedIndex === 1" (click)="setTab(1)" id="user-tab" data-bs-toggle="tab" 
                         data-bs-target="#user" type="button" role="tab" 
                         aria-controls="user" aria-selected="true">
                   <span>2</span>User Details
                 </button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="final-tab" data-bs-toggle="tab" 
-                        data-bs-target="#final" type="button" role="tab" 
-                        aria-controls="final" aria-selected="false">
+                <button class="nav-link" [class.active]="selectedIndex === 2" (click)="setTab(2)">
                   <span>3</span>Final Steps
                 </button>
               </li>
@@ -48,7 +44,7 @@
       <div class="container">
         <div class="tab-content" id="registrationTabsContent">
           <!-- Company Details Tab -->
-          <div class="tab-pane fade show active" id="company" role="tabpanel" aria-labelledby="company-tab">
+          <div class="tab-pane fade show"[ngClass]="{'show active': selectedIndex === 0}" id="company" role="tabpanel" aria-labelledby="company-tab">
             <div class="row">
                 <div class="col-12 col-md-8">
                     <div class="card-box">
@@ -98,7 +94,7 @@
                                 </label>
                             </div>
                             <div class="col-12 btn-form">
-                                <button class="primary-btn">
+                                <button (click)="nextTab()" class="primary-btn">
                                     Submit & Proceed
                                 </button>
                             </div>
@@ -129,13 +125,13 @@
           </div>
           
           <!-- User Details Tab -->
-          <div class="tab-pane fade" id="user" role="tabpanel" aria-labelledby="user-tab">
+          <div class="tab-pane fade"  [ngClass]="{'show active': selectedIndex === 1}" id="user" role="tabpanel" aria-labelledby="user-tab">
             <div class="row">
                 <div class="col-12 col-md-8">
                     <div class="card-box">
                         <h2 class="sub-heading  mb-4">User Details</h2>
                         <h3 class="sub-heading-2  mb-4" style="color:#6C177C; text-decoration: underline;">User 1</h3>
-                        <form class="row">
+                        <form class="row" (ngSubmit)="onSubmit($event)">
                             <div class="col-12 col-md-6 mb-4 ">
                                 <input placeholder="First name *" class="form-control">
                             </div>
@@ -147,6 +143,12 @@
                             </div>
                             <div class="col-12 col-md-6  mb-4">
                                 <input placeholder="Job title *" class="form-control">
+                            </div>
+                            <div class="col-12 col-md-6  mb-4">
+                                <input placeholder="User name *" class="form-control">
+                            </div>
+                            <div class="col-12 col-md-6  mb-4">
+                                <input placeholder="Password *" class="form-control">
                             </div>
 
                             <div class="col-12 col-md-6  mb-4">
@@ -161,7 +163,7 @@
                                     <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
                                   </svg></i> Add new user
                                 </button>
-                                <button class="primary-btn">
+                                <button  type="submit" class="primary-btn">
                                     Submit & Proceed
                                 </button>
                             </div>
@@ -194,7 +196,7 @@
           </div>
           
           <!-- Final Steps Tab -->
-          <div class="tab-pane fade" id="final" role="tabpanel" aria-labelledby="final-tab">
+          <div class="tab-pane fade" [ngClass]="{'show active': selectedIndex === 2}" id="final" role="tabpanel" aria-labelledby="final-tab">
             <div class="row">
               <div class="col-12 col-md-8">
                 <div class="card-box">
@@ -324,7 +326,7 @@
                         </div>
                         <div class="col-12 btn-form">
 
-                            <button class="primary-btn">
+                            <button (click)="submitForm()" class="primary-btn">
                                 Submit application
                             </button>
                         </div>
