@@ -7,16 +7,16 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" #navbar>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a routerLink="/" class="nav-link active" aria-current="page" >Home</a>
+                <a routerLink="/" class="nav-link active" aria-current="page" (click)="closeNavbar()" >Home</a>
               </li>
               <li class="nav-item">
                
                
 
-                <a  class="nav-link"  routerLink="/about-us">About</a>
+                <a  class="nav-link"  routerLink="/about-us" (click)="closeNavbar()">About</a>
               </li>
 
     
@@ -25,23 +25,23 @@
                     Services
                 </a>
                 <ul class="dropdown-menu">
-                    <a routerLink="/enhancedDBS" class="dropdown-item"> Enhanced DBS Check</a>
-                    <a routerLink="/right-to-do" class="dropdown-item">Right to Work Check</a>
+                    <a routerLink="/enhancedDBS" class="dropdown-item" (click)="closeNavbar()"> Enhanced DBS Check</a>
+                    <a routerLink="/right-to-do" class="dropdown-item" (click)="closeNavbar()">Right to Work Check</a>
     
                 </ul>
               </li>
             
 
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
                     Support
                 </a>
                 <ul class="dropdown-menu">
-                    <a routerLink="/how-to-apply" class="dropdown-item">How to Apply on Check DBS</a>
-                    <a routerLink="/track-app" class="dropdown-item">Track my Application</a>
-                    <a routerLink="/privacy-policy" class="dropdown-item">Policies</a>
-                    <a routerLink="/callback-request" class="dropdown-item">Call Back Request</a>
-                    <a routerLink="/faq" class="dropdown-item">FAQs</a>
+                    <a routerLink="/how-to-apply" class="dropdown-item" (click)="closeNavbar()">How to Apply on Check DBS</a>
+                    <a routerLink="/track-app" class="dropdown-item" (click)="closeNavbar()">Track my Application</a>
+                    <a routerLink="/privacy-policy" class="dropdown-item" (click)="closeNavbar()">Policies</a>
+                    <a routerLink="/callback-request" class="dropdown-item" (click)="closeNavbar()">Call Back Request</a>
+                    <a routerLink="/faq" class="dropdown-item" (click)="closeNavbar()">FAQs</a>
     
                 </ul>
               </li>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -10,5 +10,17 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent {
   email:string='info@checkdbs.co.uk'
+  @ViewChild('navbar') navbar!: ElementRef;
+  @ViewChild('dropdown') dropdown!: ElementRef;
+
+
+  closeNavbar() {
+    const navbarEl = this.navbar.nativeElement;
+    if (navbarEl.classList.contains('show')) {
+      navbarEl.classList.remove('show');
+    }
+  }
+  
+
 
 }
