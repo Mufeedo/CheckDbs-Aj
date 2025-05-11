@@ -28,3 +28,25 @@
         cursor: pointer;
     }
 }
+
+.inner-banner.large {
+    position: relative;
+    background-image: url('/images/right_to_do_cover.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity here */
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+}
